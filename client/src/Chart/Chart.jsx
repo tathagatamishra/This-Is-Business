@@ -1,7 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Chart.scss";
 
 export default function Chart() {
+  const [trading, setTrading] = useState(null);
+  
+
   useEffect(() => {
     const socketUrl =
       "wss://functionup.fintarget.in/ws?id=fintarget-functionup";
@@ -14,6 +17,7 @@ export default function Chart() {
 
     socket.addEventListener("message", (event) => {
       console.log("WebSocket message:", event.data);
+      setTrading(event.data);
     });
 
     socket.addEventListener("close", (event) => {
@@ -29,7 +33,7 @@ export default function Chart() {
     <div className="Chart">
       <h1>candle-stick</h1>
 
-      <div>div</div>
+      <div>{JSON.stringify(trading)}</div>
     </div>
   );
 }
