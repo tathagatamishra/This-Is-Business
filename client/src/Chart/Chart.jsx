@@ -298,19 +298,14 @@ export default function Chart() {
   });
 
   return (
-    <div className="Chart">
-      <h1>candle-stick</h1>
-
-      <div>{JSON.stringify(trading)}</div>
-
-      <div id="chart">
-        <ReactApexChart
-          options={state.options}
-          series={state.series}
-          type="candlestick"
-          height={350}
-        />
-      </div>
+    <div id="chart">
+      <ReactApexChart
+        options={state.options}
+        series={state.series}
+        type="candlestick"
+        height={650}
+        // width={800}
+      />
     </div>
   );
 }

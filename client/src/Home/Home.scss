@@ -1,0 +1,28 @@
+.Home {
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    // border: solid 3px Orange;
+
+    & h1 {
+        color: rgb(58, 85, 126);
+        width: 100%;
+    }
+
+    & p {
+        height: 10rem;
+        width: 100%;
+        margin: 0 0 2rem;
+
+        // border: solid 1.5px HotPink;
+    }
+
+    & a {
+        width: 100%;
+    }
+}
