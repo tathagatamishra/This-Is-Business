@@ -1,5 +1,5 @@
 import "./App.scss";
-import CandlestickChart from "./Chart/Chart";
+import Chart from "./Chart/Chart";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
         <div className="webBody">
 
           <Routes>
-            <Route path="/" element={<CandlestickChart />} />
+            <Route path="/" element={<Chart />} />
           </Routes>
 
         </div>
